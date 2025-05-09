@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /private/
+Allow: /
+
+Sitemap: https://jsonformatter.yesnomark.com/sitemap.xml

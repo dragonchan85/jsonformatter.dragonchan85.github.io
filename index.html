@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9288770962100185"
+    crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>JSON Formatter - Beautify and Indent Your JSON Code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Online JSON Formatter for developers. Beautify, indent, and validate your raw JSON strings easily. Supports full syntax parsing with IDE-like styling. Perfect for JavaScript, Java, XML, and API debugging.">
+  <meta name="naver-site-verification" content="b366dbb6459aafa1c91f8f26b783724b86199d71" />
+
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      font-family: 'Fira Code', monospace;
+      margin: 0;
+      padding: 0;
+    }
+
+    .editor-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      color: #61dafb;
+      font-weight: 400;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      border: 1px solid #333;
+      padding: 10px;
+      font-size: 14px;
+      resize: none;
+      height: 40%;
+      width: 100%;
+      font-family: 'Fira Code', monospace;
+      line-height: 1.5;
+      box-sizing: border-box;
+    }
+
+    pre {
+      background-color: #252526;
+      color: #dcdcdc;
+      padding: 15px;
+      overflow: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+      border: 1px solid #333;
+      height: 40%;
+      margin-top: 20px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007acc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 10px;
+      align-self: flex-start;
+    }
+
+    button:hover {
+      background-color: #005f99;
+    }
+
+    .adsense-container {
+      margin-top: auto;
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      textarea, pre {
+        height: 35%;
+        font-size: 13px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="editor-container">
+    <h1>Online JSON Formatter and Beautifier for Developers</h1>
+    <textarea id="jsonInput" placeholder='Paste raw JSON string here...'></textarea>
+    <button id="formatBtn">Format</button>
+    <pre id="formattedOutput">// Formatted JSON will appear here</pre>
+
+    <!-- AdSense Ad Unit -->
+    <div class="adsense-container">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+  </div>
+
+  <!-- Google Adsense script at the end -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9288770962100185"
+          crossorigin="anonymous"></script>
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-9288770962100185"
+              data-ad-slot="6399153707"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+  <script>
+    window.onload = function () {
+      // Activate Adsense after DOM is ready
+      try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+        console.warn('Adsense failed to load:', e.message);
+      }
+
+      // Setup format button
+      document.getElementById('formatBtn').addEventListener('click', function () {
+        const input = document.getElementById('jsonInput').value;
+        const output = document.getElementById('formattedOutput');
+
+        try {
+          const parsed = JSON.parse(input);
+          const formatted = JSON.stringify(parsed, null, 2);
+          output.textContent = formatted;
+        } catch (err) {
+          output.textContent = '// Error: Invalid JSON\n' + err.message;
+        }
+      });
+    };
+  </script>
+</body>
+</html>
